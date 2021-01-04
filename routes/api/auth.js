@@ -10,6 +10,7 @@ const auth = require('../../middleware/auth')
 const User = require('../../models/User')
 
 // @route     GET api/auth
+// @desc      login user
 router.get('/', auth, async (req,res)=>{
     try {
         const user = await User.findById(req.user.id).select('-password')
