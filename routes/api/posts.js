@@ -104,7 +104,7 @@ router.delete ('/:id', auth, async (req,res)=>{
 // @route     put api/posts/like/:id
 // @desc      like a post
 // @access    private
-router.get ('/like/:id', auth, async (req,res)=>{
+router.put ('/like/:id', auth, async (req,res)=>{
     try {
         const post = await Post.findById(req.params.id)
 
